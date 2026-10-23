@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catanator — Play vs Bot</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="sea-glow"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">⬡</span><span>Catanator</span><small>RANKED 1v1 LAB</small></div>
+    <div id="rules" class="rules"></div>
+    <div class="top-actions">
+      <label class="timer-toggle"><input id="timer-toggle" type="checkbox"><span>Turn timer</span></label>
+      <button id="new-game-button" class="button ghost">New game</button>
+    </div>
+  </header>
+
+  <main id="game-shell" class="game-shell is-empty">
+    <section class="table-column">
+      <div id="opponent-panel" class="player-panel opponent"></div>
+      <div class="board-wrap">
+        <svg id="board" viewBox="-110 -105 1080 905" role="img" aria-label="Catan board"></svg>
+        <div id="dice" class="dice-display hidden"></div>
+        <div id="status-pill" class="status-pill">Choose a game to begin</div>
+      </div>
+      <div id="own-panel" class="player-panel own"></div>
+      <div id="hand" class="hand"></div>
+      <div id="actions" class="action-dock"></div>
+    </section>
+
+    <aside class="log-panel">
+      <div class="log-head">
+        <div><small>LIVE RECORD</small><h2>Game log</h2></div>
+        <span id="turn-count" class="turn-count">Turn —</span>
+      </div>
+      <div id="game-log" class="game-log">
+        <div class="empty-log">Every move and chance outcome will appear here.</div>
+      </div>
+      <div class="log-foot"><span class="record-dot"></span><span id="log-file">Exact JSONL logging ready</span></div>
+    </aside>
+  </main>
+
+  <div id="error-toast" class="toast hidden" role="alert"></div>
+
+  <div id="setup-modal" class="modal open" role="dialog" aria-modal="true">
+    <div class="modal-card setup-card">
+      <div class="eyebrow">LOCAL MATCH</div>
+      <h1>Take a seat at the harbor.</h1>
+      <p class="intro">A full 15-point ranked game against the same fast-engine bot used in evaluation. Your game is logged move-for-move for later analysis.</p>
+      <form id="setup-form">
+        <fieldset>
+          <legend>Your seat</legend>
+          <div class="segmented">
+            <label><input type="radio" name="seat" value="first" checked><span>First</span></label>
+            <label><input type="radio" name="seat" value="second"><span>Second</span></label>
+            <label><input type="radio" name="seat" value="random"><span>Random</span></label>
+          </div>
+        </fieldset>
+        <label class="field">Opponent
+          <select name="bot">
+            <option value="p3">P3 replica-a — current best</option>
+            <option value="champion">Champion — depth-2 alpha-beta</option>
+          </select>
+        </label>
+        <label class="field">Board seed <span>optional</span>
+          <input name="seed" inputmode="numeric" placeholder="Random seed">
+        </label>
+        <button class="button primary start-button" type="submit">Start game</button>
+      </form>
+      <p class="fineprint">Balanced Dice · Friendly Robber · discard above 9 cards · no player-to-player trades</p>
+    </div>
+  </div>
+
+  <div id="choice-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-card choice-card">
+      <button id="choice-close" class="modal-close" aria-label="Close">×</button>
+      <div id="choice-content"></div>
+    </div>
+  </div>
+
+  <div id="end-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-card end-card">
+      <div id="end-content"></div>
+      <button id="end-new-game" class="button primary">Play another</button>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

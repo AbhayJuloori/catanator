@@ -1,0 +1,32 @@
+{
+  "completed_generations": 12,
+  "replica": 0,
+  "schema": "eval_tuning.weights/1",
+  "source": "planner-weight-cma/1",
+  "weights": {
+    "army": 0.20658053079470667,
+    "bonus_vp_denial": -0.028199604664435204,
+    "bonus_vp_reach": -0.024970073824782182,
+    "buildable": 0.155086781100559,
+    "contested_share": -0.0947013350114694,
+    "expansion_tempo": 0.07474209510685385,
+    "hand_devs": 0.30257846437838914,
+    "hand_resources": 0.495628770587509,
+    "has_largest_army": 0.08819766745225548,
+    "has_longest_road": 0.07983438088692038,
+    "longest_road": 0.8042809940713113,
+    "opp_production": 0.803289375408435,
+    "prod_diversity": 1.0840616974665154,
+    "production": 1.555177242508422,
+    "res_BRICK": 1.3085180454853422,
+    "res_ORE": 1.8982658227462763,
+    "res_SHEEP": 1.2124097867131862,
+    "res_WHEAT": 1.4854636647507224,
+    "res_WOOD": 1.221976333103119,
+    "scale": 0.36674911946313,
+    "synergy_city": 0.4381410774160725,
+    "synergy_expansion": 0.0838996168069721,
+    "vp_lead": 0.8849868114373943,
+    "vp_progress": 1.7105589328573336
+  }
+}

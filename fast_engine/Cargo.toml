@@ -1,0 +1,21 @@
+[package]
+name = "catan-ranked-fast"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+
+[lib]
+name = "catan_ranked_fast"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+extension-module = ["pyo3/extension-module"]
+
+[dependencies]
+pyo3 = { version = "0.26.0" }
+serde_json = "1.0"
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+panic = "abort"

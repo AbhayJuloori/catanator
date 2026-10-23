@@ -1,0 +1,15 @@
+{
+  "schema": "catan-ranked.setup-coverage-root/1",
+  "seed": 3289913852758627355,
+  "game_sha256": "a9a387d1ef5107ac8eca486dd653298ddba8e0d6bfafb94bffee8f3bdf89a567",
+  "first_root_hash": "04d7cfe20afcd5f1d93054dcf913d4f112fefdca6082b4b5b7b75299d3ade903",
+  "second_root_hash": "8f2e486e01c9ce71c3079063fd662b19904fce507fda569e249c10b658f2875a",
+  "prefix": [
+    [137, null, null],
+    [75, null, null]
+  ],
+  "first_settlement": 178,
+  "first_road": 122,
+  "recorded_second_settlement": 141,
+  "coverage_second_settlement": 131
+}

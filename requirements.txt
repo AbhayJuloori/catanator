@@ -1,0 +1,3 @@
+numpy>=2.0
+pytest
+maturin==1.15.0

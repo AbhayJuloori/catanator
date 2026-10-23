@@ -1,0 +1,32 @@
+{
+ "schema": "eval_tuning.weights/1",
+ "opponent": "alphabeta",
+ "depth": 2,
+ "weights": {
+  "army": 0.27988,
+  "bonus_vp_denial": -0.03921,
+  "bonus_vp_reach": 0.01199,
+  "buildable": 0.2981,
+  "contested_share": -0.12056,
+  "expansion_tempo": 0.08352,
+  "hand_devs": 0.20713,
+  "hand_resources": 0.2411,
+  "has_largest_army": 0.258,
+  "has_longest_road": 0.46285,
+  "longest_road": 0.50993,
+  "opp_production": 1.23796,
+  "prod_diversity": 0.70161,
+  "production": 0.94685,
+  "res_BRICK": 1.17024,
+  "res_ORE": 1.80343,
+  "res_SHEEP": 0.99872,
+  "res_WHEAT": 1.75782,
+  "res_WOOD": 1.09979,
+  "scale": 0.45319,
+  "synergy_city": 0.27732,
+  "synergy_expansion": 0.41919,
+  "vp_lead": 0.96372,
+  "vp_progress": 1.16465
+ },
+ "note": "consensus: per-term mean of the five champions that beat BOTH bars on held-out boards. Averaging independently-fitted winners cancels each leg's overfit to its own training boards; the terms they agree on survive and the ones they disagree on shrink toward the mean, which is the right prior when three legs point three ways."
+}
