@@ -5,6 +5,7 @@ use crate::rng::PythonRandom;
 use crate::state::{RankedState, VICTORY_POINT};
 use crate::topology::{ACTION_B, ACTION_KIND};
 
+#[allow(dead_code)]
 const DEPTH: u8 = 2;
 const DEV_INITIAL: [u8; 5] = [14, 2, 2, 2, 5];
 
@@ -145,6 +146,7 @@ fn alphabeta(
     (best_action, best_value)
 }
 
+#[allow(dead_code)]
 pub fn choose_action(state: &mut RankedState) -> Option<u16> {
     choose_action_at_depth(state, DEPTH)
 }
