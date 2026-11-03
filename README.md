@@ -7,6 +7,8 @@ and searches the opening snake draft to the end. You can play against it in your
 It is strong against other bots in simulation. It is not yet strong against good humans, and
 the sections below say exactly where it is stuck. Help is welcome.
 
+![Catanator play UI: the bot has made its opening placement on a seeded board](docs/play_ui.png)
+
 ## Ruleset
 
 The engine implements a competitive 1v1 ruleset:
