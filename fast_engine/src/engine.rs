@@ -33,6 +33,7 @@ impl RankedState {
         if value < 0 { -1 } else { value % 2 }
     }
 
+    #[allow(dead_code)]
     fn incident_player_road(&self, player: usize, vertex: usize) -> bool {
         VERTEX_EDGES[vertex]
             .iter()
